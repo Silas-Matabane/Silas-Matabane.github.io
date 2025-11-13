@@ -24,10 +24,8 @@ This portfolio represents a complete professional web presence built with modern
 4. **Skills Section** - Interactive skill categories with GitHub activity integration
 5. **Experience Timeline** - Professional experience and education history
 6. **Projects Showcase** - Featured projects with technology stacks and live demos
-7. **Articles/Blog** - Technical writing section (content coming soon)
-8. **Testimonials** - Client and colleague recommendations
-9. **Contact Section** - Multiple contact methods and call-to-action
-10. **Footer** - Social media links and copyright information
+7. **Contact Section** - Multiple contact methods and call-to-action
+8. **Footer** - Social media links and copyright information
 
 ## 🛠️ Technologies Used
 
@@ -185,7 +183,7 @@ While this is a personal portfolio, suggestions and improvements are welcome:
 ## 📧 Contact
 
 **Matabane Mpako Silas**
-- **Email**: [matabane.silas@gmail.com](mailto:tetelosilas@gmail.com)
+- **Email**: [tetelosilas@gmail.com](mailto:tetelosilas@gmail.com)
 - **LinkedIn**: [silas-tetelo-matabane-TT](https://www.linkedin.com/in/silas-tetelo-matabane-TT)
 - **GitHub**: [Silas-Matabane](https://github.com/Silas-Matabane)
 - **Website**: [silas-matabane.github.io](https://silas-matabane.github.io)
