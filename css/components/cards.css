@@ -5,66 +5,114 @@
   --tech-track-speed: 8s; /* smaller = faster */
 }
 
+/* Force white text in project cards - override all link states */
+a:link .project-card .card-title,
+a:link .project-card .card-text,
+a:link .project-card h5,
+a:link .project-card p,
+a:link .project-card .tech-title,
+a:link .project-card .tech-label,
+a:visited .project-card .card-title,
+a:visited .project-card .card-text,
+a:visited .project-card h5,
+a:visited .project-card p,
+a:visited .project-card .tech-title,
+a:visited .project-card .tech-label,
+a:hover .project-card .card-title,
+a:hover .project-card .card-text,
+a:hover .project-card h5,
+a:hover .project-card p,
+a:hover .project-card .tech-title,
+a:hover .project-card .tech-label,
+a:active .project-card .card-title,
+a:active .project-card .card-text,
+a:active .project-card h5,
+a:active .project-card p,
+a:active .project-card .tech-title,
+a:active .project-card .tech-label,
+.project-card .card-title,
+.project-card .card-text,
+.project-card h5,
+.project-card p,
+.project-card .tech-title,
+.project-card .tech-label {
+  color: #ffffff !important;
+}
+
 /* Cards / Project Cards */
 .project-card {
   border: none;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform .3s ease, box-shadow .3s ease;
-  background: #ffffff; /* changed to white */
-  color: var(--dark-color);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+  background: rgba(30, 40, 70, 0.5);
+  color: #ffffff;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(100, 181, 246, 0.15);
 }
 
 /* Force project card background to ensure no other rule overrides it */
 .nightsky-bg .project-card,
 #projects .project-card,
 .project-card {
-  background: #ffffff !important; /* enforce white */
-  color: var(--dark-color) !important;
+  background: rgba(30, 40, 70, 0.5) !important;
+  color: #ffffff !important;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(100, 181, 246, 0.15) !important;
 }
 
 /* Card hover */
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+  box-shadow: 0 12px 32px rgba(0,0,0,.5), 0 0 30px rgba(100, 181, 246, 0.2);
+  background: rgba(35, 45, 75, 0.65) !important;
+  border-color: rgba(100, 181, 246, 0.3) !important;
 }
 
 .project-card img {
   height: 180px;
   object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
 }
 
-/* Explore button — adjusted for lighter card background (no color clash) */
+.project-card:hover img {
+  opacity: 1;
+}
+
+/* Explore button — adjusted for dark card background */
 .project-card .btn-outline-primary {
-  display: inline-flex !important;     /* ensure flex layout inside button */
-  align-items: center !important;      /* vertical centering of content */
-  justify-content: center !important;  /* horizontal centering of content */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   text-align: center !important;
-  padding: 0.5rem 0.9rem;               /* keep desired size */
+  padding: 0.5rem 0.9rem;
   min-width: 200px;
   max-width: 260px;
   width: auto;
-  align-self: center !important;       /* center the button horizontally in the flex column card-body */
+  align-self: center !important;
   box-sizing: border-box;
 
-  /* Use the dark/navy color for border and text so it contrasts on the light card */
-  border: 2px solid var(--navbar-color);
-  color: var(--navbar-color);
-  background: transparent;
+  border: 2px solid rgba(100, 181, 246, 0.6);
+  color: rgba(100, 181, 246, 1);
+  background: rgba(100, 181, 246, 0.05);
 
-  transition: background 180ms ease, color 180ms ease, transform 120ms ease, box-shadow 180ms ease;
+  transition: background 180ms ease, color 180ms ease, transform 120ms ease, box-shadow 180ms ease, border-color 180ms ease;
 
-  /* increased space above the Explore button */
   margin-top: 2.5rem;
+  font-weight: 500;
 }
 
-/* Hover / focus states — fill with dark color and white text */
+/* Hover / focus states */
 .project-card .btn-outline-primary:hover,
 .project-card .btn-outline-primary:focus {
-  background: var(--navbar-color);
+  background: rgba(100, 181, 246, 0.2);
   color: #ffffff !important;
+  border-color: rgba(100, 181, 246, 0.8);
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(12,32,67,0.18);
+  box-shadow: 0 8px 18px rgba(100, 181, 246, 0.3);
 }
 
 /* Ensure the larger rounded style applies even when Bootstrap's .btn-sm reduces padding */
@@ -73,10 +121,10 @@
   padding-bottom: 0.5rem;
 }
 
-/* Optional: make the button stand out when card is inside nightsky-bg as well */
+/* Make the button stand out when card is inside nightsky-bg */
 .nightsky-bg .project-card .btn-outline-primary {
-  border-color: var(--navbar-color);
-  color: var(--navbar-color);
+  border-color: rgba(100, 181, 246, 0.6);
+  color: rgba(100, 181, 246, 1);
 }
 
 
@@ -93,12 +141,39 @@
   transition: transform .15s ease, filter .15s ease, opacity .12s ease;
 }
 
-/* Card body padding adjustment */
-.project-card .card-body {
-  padding: 1.5rem; /* increased spacing inside the card */
+/* Override link colors for project cards */
+a .project-card,
+a .project-card *,
+a:hover .project-card,
+a:hover .project-card *,
+a:focus .project-card,
+a:focus .project-card * {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* slightly larger hit area and focusable */x; /* increased padding around each tech item */
+/* Card body padding adjustment */
+.project-card .card-body {
+  padding: 1.5rem;
+  background: rgba(15, 20, 40, 0.4);
+  position: relative;
+}
+
+.project-card .card-title,
+.project-card .card-text,
+.project-card .tech-title,
+.project-card h5,
+.project-card p {
+  color: #ffffff !important;
+}
+
+.project-card .card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* slightly larger hit area and focusable */
 .project-card .tech-item {
   flex: 0 0 auto;
   text-align: center;
@@ -108,12 +183,13 @@
 
 /* label under icon */
 .project-card .tech-label {
-  color: var(--navbar-color);
+  color: #ffffff;
   font-size: 0.80rem;
   margin-top: 6px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
 }
 
 /* hover / focus effects */
@@ -192,4 +268,28 @@
 /* smaller screens: slow down and keep visible */
 @media (max-width: 576px) {
   .tech-track { animation-duration: 28s; gap: 0.6rem; }
+}
+
+/* Final override to ensure ALL text in project cards is white */
+.project-card *,
+a .project-card *,
+a:link .project-card *,
+a:visited .project-card *,
+a:hover .project-card *,
+a:active .project-card * {
+  color: #ffffff !important;
+}
+
+/* Explore button - white text with blue border */
+.project-card .btn-outline-primary,
+a .project-card .btn-outline-primary {
+  color: #ffffff !important;
+  border-color: rgba(100, 181, 246, 0.5) !important;
+}
+
+.project-card .btn-outline-primary:hover,
+a .project-card .btn-outline-primary:hover {
+  color: #ffffff !important;
+  background-color: rgba(100, 181, 246, 0.2) !important;
+  border-color: rgba(100, 181, 246, 1) !important;
 }
