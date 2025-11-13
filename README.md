@@ -13,7 +13,6 @@ This portfolio represents a complete professional web presence built with modern
 - **🚀 Performance Optimized**: Fast loading with efficient CSS and JavaScript
 - **♿ Accessibility Focused**: ARIA labels, semantic HTML, and keyboard navigation
 - **🔍 SEO Optimized**: Meta tags, Open Graph, and Twitter Cards
-- **🌙 Theme Toggle**: Light/dark mode switching capability
 - **📊 Live GitHub Integration**: Real-time GitHub statistics and activity
 - **✨ Smooth Animations**: AOS library integration for scroll-triggered animations
 
