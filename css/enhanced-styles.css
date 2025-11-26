@@ -45,7 +45,6 @@ body.night-sky-body::before {
     width: 100%;
     height: 100%;
     background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    opacity: 0.35;
     pointer-events: none;
     z-index: -3;
 }
@@ -106,8 +105,6 @@ body.night-sky-body .text-muted {
 body.night-sky-body .card,
 body.night-sky-body .skill-block,
 body.night-sky-body .skill-category,
-body.night-sky-body .github-stats-section,
-body.night-sky-body .github-card,
 body.night-sky-body .article-card,
 body.night-sky-body .testimonial-card,
 body.night-sky-body .contact-method,
@@ -347,31 +344,6 @@ body[data-theme="dark"] .glass-panel {
     color: #fff3cd;
 }
 
-.github-card {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: var(--border-radius-lg);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-body[data-theme="dark"] .github-card {
-    background: rgba(22, 27, 34, 0.9);
-    border-color: rgba(255, 255, 255, 0.05);
-}
-
-.github-card-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--dark-color);
-}
-
-body[data-theme="dark"] .github-card-title {
-    color: var(--light-color);
-}
-
 .skill-category {
     background: white;
     border-radius: var(--border-radius-lg);
@@ -447,25 +419,6 @@ body[data-theme="dark"] .skill-bar {
     border-radius: 3px;
 }
 
-/* GitHub Stats */
-.github-stats-section {
-    background: white;
-    border-radius: var(--border-radius-lg);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    margin-top: 2rem;
-}
-
-body[data-theme="dark"] .github-stats-section {
-    background: #161b22;
-}
-
-.github-stats-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-}
-
 /* Timeline Styles */
 .timeline-container {
     position: relative;
@@ -475,11 +428,11 @@ body[data-theme="dark"] .github-stats-section {
 .timeline-container::before {
     content: '';
     position: absolute;
-    left: 1rem;
+    left: 0.45rem;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: var(--primary-color);
+    width: 1px;
+    background: var(--accent-color);
 }
 
 .timeline-item {

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         starsContainer.className = 'stars';
 
         const isMobile = window.innerWidth < 768;
-        const starCount = isMobile ? 70 : 140;
+        const starCount = isMobile ? 140 : 280;
 
         for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
