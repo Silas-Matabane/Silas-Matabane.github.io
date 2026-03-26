@@ -219,6 +219,121 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 
+    // ===== CAREER TAB SWITCHING =====
+    const tabButtons = document.querySelectorAll('.career-tab-btn');
+    const tabPanels = document.querySelectorAll('.career-panel');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-tab');
+
+            // Deactivate all
+            tabButtons.forEach(b => b.classList.remove('active'));
+            tabPanels.forEach(p => p.classList.remove('active'));
+
+            // Activate selected
+            btn.classList.add('active');
+            const panel = document.getElementById('panel-' + target);
+            if (panel) {
+                panel.classList.add('active');
+                // Re-trigger stagger reveals inside panel
+                panel.querySelectorAll('.stagger-reveal').forEach(sr => {
+                    sr.classList.remove('revealed');
+                    void sr.offsetWidth; // force reflow
+                    sr.classList.add('revealed');
+                });
+            }
+        });
+    });
+
+    // ===== ANIMATED COUNTER =====
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number[data-count]');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-count'), 10);
+                    const duration = 2000;
+                    const start = performance.now();
+
+                    function update(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        // Ease out cubic
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.round(eased * target) + '+';
+                        if (progress < 1) requestAnimationFrame(update);
+                    }
+                    requestAnimationFrame(update);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(c => counterObserver.observe(c));
+    }
+    animateCounters();
+
+    // ===== STAGGER REVEAL ON SCROLL =====
+    const staggerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.stagger-reveal').forEach(el => {
+        staggerObserver.observe(el);
+    });
+
+    // ===== REVEAL LINE ON SCROLL =====
+    const lineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                lineObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.reveal-line').forEach(el => {
+        lineObserver.observe(el);
+    });
+
+    // ===== TILT CARD MOUSE EFFECT =====
+    document.querySelectorAll('.tilt-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+            card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+
+    // ===== MAGNETIC CURSOR ON BUTTONS =====
+    document.querySelectorAll('.career-tab-btn, .hero-actions .btn').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) translateY(-2px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+        });
+    });
+
     // Console message for developers
     console.log('%c👋 Hello there, fellow developer!', 'color: #13233c; font-size: 16px; font-weight: bold;');
     console.log('%cInterested in how this portfolio was built? Check out the code on GitHub!', 'color: #666; font-size: 14px;');
