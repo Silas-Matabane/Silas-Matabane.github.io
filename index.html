@@ -1,1054 +1,1698 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/mainLogo.png" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="images/mainLogo.png">
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Silas Matabane - Full-Stack Developer, IT Technician, Music Artist & Forex Trader. Specializing in ASP.NET Core, React, WordPress, Azure, AWS, music production, and forex trading. Based in Tembisa, South Africa."
+    />
+    <meta
+      name="keywords"
+      content="Full-Stack Developer South Africa, IT Technician Tembisa, Music Artist, Forex Trader, ASP.NET Developer, WordPress Developer, WiFi Portals, Cloud Solutions Azure AWS, Amapiano Artist"
+    />
+    <meta name="author" content="Matabane Mpako Silas" />
 
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Silas Matabane - Full-Stack Developer, IT Technician, Music Artist & Forex Trader. Specializing in ASP.NET Core, React, WordPress, Azure, AWS, music production, and forex trading. Based in Tembisa, South Africa.">
-  <meta name="keywords"
-    content="Full-Stack Developer South Africa, IT Technician Tembisa, Music Artist, Forex Trader, ASP.NET Developer, WordPress Developer, WiFi Portals, Cloud Solutions Azure AWS, Amapiano Artist">
-  <meta name="author" content="Matabane Mpako Silas">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://silas-matabane.github.io/" />
+    <meta
+      property="og:title"
+      content="Matabane Mpako Silas - Software Engineer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Full-Stack Developer, Music Artist & Forex Trader — building software, creating music, and trading markets."
+    />
+    <meta
+      property="og:image"
+      content="https://silas-matabane.github.io/images/profile-pic.jpg"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://silas-matabane.github.io/">
-  <meta property="og:title" content="Matabane Mpako Silas - Software Engineer Portfolio">
-  <meta property="og:description"
-    content="Full-Stack Developer, Music Artist & Forex Trader — building software, creating music, and trading markets.">
-  <meta property="og:image" content="https://silas-matabane.github.io/images/profile-pic.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://silas-matabane.github.io/" />
+    <meta
+      property="twitter:title"
+      content="Matabane Mpako Silas - Developer | Artist | Trader"
+    />
+    <meta
+      property="twitter:description"
+      content="Full-Stack Developer, Music Artist & Forex Trader — building software, creating music, and trading markets."
+    />
+    <meta
+      property="twitter:image"
+      content="https://silas-matabane.github.io/images/profile-pic.jpg"
+    />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://silas-matabane.github.io/">
-  <meta property="twitter:title" content="Matabane Mpako Silas - Developer | Artist | Trader">
-  <meta property="twitter:description"
-    content="Full-Stack Developer, Music Artist & Forex Trader — building software, creating music, and trading markets.">
-  <meta property="twitter:image" content="https://silas-matabane.github.io/images/profile-pic.jpg">
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    <!-- Frameworks & Libraries -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Frameworks & Libraries -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Load site CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/sections/projects.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/enhanced-styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <title>Matabane Mpako Silas - Portfolio</title>
+  </head>
 
-  <!-- Load site CSS -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/components/cards.css">
-  <link rel="stylesheet" href="css/sections/projects.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/enhanced-styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <title>Matabane Mpako Silas - Portfolio</title>
-</head>
-
-<body class="night-sky-body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
-  <!-- Navigation -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">
-        <img src="images/mainLogo.png" alt="Logo" width="30" height="30" class="me-2">
-        Silas Matabane
-      </a>
-
-      <div class="d-flex align-items-center order-lg-3">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-label="Toggle navigation menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home" aria-current="page">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">All Projects</a></li>
-        
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header id="home" class="hero-section nightsky-bg">
-    <div class="container position-relative">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-7" data-aos="fade-up">
-          <span class="badge rounded-pill text-bg-light px-3 py-2 mb-3 mt-3">Software Developer &amp; IT
-            Technician &amp; Music Artist &amp; Forex Trader</span>
-          <h1 class="display-4 fw-bold mb-3">Matabane Mpako Silas</h1>
-          <h2 class="text-primary mb-4">Full-Stack Developer | Music Artist | Forex Trader</h2>
-          <p class="lead text-light mb-4">
-            Multi-disciplinary creative and technologist with 4+ years of experience in IT infrastructure, web development,
-            cloud environments, music production, and financial market analysis. Skilled in C#, ASP.NET Core, JavaScript,
-            React, Node.js, SQL, Azure, AWS — and equally passionate about creating music and trading the forex markets.
-          </p>
-
-          <div class="d-flex flex-wrap gap-3 hero-actions">
-            <a class="btn btn-primary btn-lg" href="Projects/CV/Silas Matabane Online CV.html" target="_blank"
-              rel="noopener" aria-label="Open interactive CV in a new tab">
-              <i class="fas fa-arrow-up-right-from-square me-2"></i>View Interactive CV
-            </a>
-            <a class="btn btn-outline-light btn-lg" href="Projects/CV/Matabane Mpako Silas - CV.pdf" download
-              aria-label="Download PDF version of CV">
-              <i class="fas fa-file-download me-2"></i>Download PDF CV
-            </a>
-            <a class="btn btn-dark btn-lg" href="#contact" aria-label="Jump to contact section">
-              <i class="fas fa-paper-plane me-2"></i>Let’s Collaborate
-            </a>
-          </div>
-
-          <div class="row g-3 mt-4 hero-contact" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-md-6">
-              <div class="d-flex align-items-center gap-3">
-                <i class="fas fa-phone text-primary"></i>
-                <a href="tel:+27729776467" class="text-decoration-none text-light">+27&nbsp;72&nbsp;977&nbsp;6467</a>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="d-flex align-items-center gap-3">
-                <i class="fas fa-envelope text-primary"></i>
-                <a href="mailto:tetelosilas@gmail.com" class="text-decoration-none text-light">tetelosilas@gmail.com</a>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="d-flex align-items-center gap-3">
-                <i class="fas fa-map-marker-alt text-primary"></i>
-                <span class="text-light">Tembisa, South Africa</span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="d-flex align-items-center gap-3">
-                <i class="fab fa-linkedin text-primary"></i>
-                <a href="https://www.linkedin.com/in/silas-tetelo-matabane-TT" target="_blank" rel="noopener"
-                  class="text-decoration-none text-light" aria-label="LinkedIn profile">LinkedIn</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-5 text-center" data-aos="fade-left">
-          <img src="images/profile-pic.jpg" 
-               alt="Silas Matabane - Software Developer" 
-               class="profile-img img-fluid rounded-circle shadow-lg mb-4 morph-border">
-        </div>
-      </div>
-
-      <!-- Scroll indicator -->
-      <div class="scroll-indicator d-none d-lg-block">
-        <div class="mouse"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="py-5 blob-bg">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-7" data-aos="fade-right">
-          <h2 class="section-heading mb-4 reveal-line">Professional Summary</h2>
-          <p class="lead text-muted mb-4">
-            Experienced in desktop support, network troubleshooting, Wi-Fi captive portals, server maintenance, and
-            building custom systems for clients. A forward-thinking problem-solver who leverages AI-augmented workflows and prompt engineering to maximize productivity and deliver modern, scalable solutions.
-            Beyond tech, I express creativity through music and build financial independence through forex trading.
-          </p>
-
-          <!-- Stats Counter -->
-          <div class="stat-counter" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-item">
-              <div class="stat-number" data-count="4">0</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-count="15">0</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-count="6">0</div>
-              <div class="stat-label">Certifications</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-count="3">0</div>
-              <div class="stat-label">Career Paths</div>
-            </div>
-          </div>
-
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="card border-0 shadow-sm h-100 tilt-card glow-hover">
-                <div class="card-body">
-                  <h3 class="h6 text-uppercase text-muted">Core Competencies</h3>
-                  <p class="mb-0">IT Support & Helpdesk, Network Troubleshooting, Microsoft 365 Administration, Wi-Fi
-                    Portals (HSNM), Server Maintenance.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card border-0 shadow-sm h-100 tilt-card glow-hover">
-                <div class="card-body">
-                  <h3 class="h6 text-uppercase text-muted">Technical Focus</h3>
-                  <p class="mb-0">Full-Stack Development, Cloud Computing (Azure & AWS), AI-Integrated Workflows, System Integration &
-                    Automation, SQL Databases.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5" data-aos="fade-left">
-          <div class="card border-0 shadow-sm tilt-card glow-hover">
-            <div class="card-body p-4">
-              <h3 class="h5 mb-3">Career Snapshot</h3>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-3 d-flex gap-3">
-                  <i class="fas fa-briefcase text-primary mt-1"></i>
-                  <span>Technical Support &amp; Solutions Architecture Intern at Konecta (2024&nbsp;– Current)</span>
-                </li>
-                <li class="mb-3 d-flex gap-3">
-                  <i class="fas fa-tools text-primary mt-1"></i>
-                  <span>IT Technician (Seasonal) at Mahlwalerwa (Pty) Ltd.</span>
-                </li>
-                <li class="mb-3 d-flex gap-3">
-                  <i class="fas fa-music text-primary mt-1"></i>
-                  <span>Music Artist — Producer &amp; Performer</span>
-                </li>
-                <li class="mb-3 d-flex gap-3">
-                  <i class="fas fa-chart-line text-primary mt-1"></i>
-                  <span>Forex Trader — Technical &amp; Price Action Analysis</span>
-                </li>
-                <li class="d-flex gap-3">
-                  <i class="fas fa-graduation-cap text-primary mt-1"></i>
-                  <span>BSc Information Technology, North West University (2022).</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Careers Section ===== -->
-  <section id="careers" class="py-5 nightsky-bg blob-bg">
-    <div class="container career-tabs">
-      <h2 class="section-title text-center mb-3 gradient-text" data-aos="fade-up">My Career Paths</h2>
-      <p class="text-center mb-5 career-subtitle" data-aos="fade-up" data-aos-delay="100">
-        I wear many hats — from building software systems, to producing music, to analyzing financial markets. Explore each path below.
-      </p>
-
-      <!-- Tab Navigation -->
-      <div class="career-tab-nav" data-aos="fade-up" data-aos-delay="150">
-        <button class="career-tab-btn active" data-tab="tech">
-          <i class="fas fa-code"></i>Software &amp; IT
-        </button>
-        <button class="career-tab-btn" data-tab="music">
-          <i class="fas fa-headphones-alt"></i>Music
-        </button>
-        <button class="career-tab-btn" data-tab="forex">
-          <i class="fas fa-chart-candlestick"></i>Forex Trading
-        </button>
-      </div>
-
-      <!-- ===== TECH PANEL ===== -->
-      <div class="career-panel active" id="panel-tech">
-        <div class="row g-4 stagger-reveal">
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon tech-icon-bg pulse-ring"><i class="fas fa-laptop-code"></i></div>
-              <h4>Full-Stack Development</h4>
-              <p>Building responsive web applications with C#, ASP.NET Core MVC, React, Node.js, and modern JavaScript frameworks. From pixel-perfect front-ends to robust back-end APIs.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon tech-icon-bg pulse-ring"><i class="fas fa-cloud"></i></div>
-              <h4>Cloud &amp; DevOps</h4>
-              <p>Deploying and managing infrastructure on Azure and AWS. CI/CD pipelines, containerization, server monitoring, and scalable cloud architecture.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon tech-icon-bg pulse-ring"><i class="fas fa-network-wired"></i></div>
-              <h4>IT Support &amp; Networking</h4>
-              <p>Desktop support, Wi-Fi captive portal deployment (HSNM), Microsoft 365 administration, LAN configuration, and server maintenance for enterprise clients.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon tech-icon-bg pulse-ring"><i class="fas fa-robot"></i></div>
-              <h4>AI &amp; Automation</h4>
-              <p>Leveraging AI-augmented workflows, prompt engineering, GitHub Copilot, and UiPath to automate repetitive tasks and accelerate delivery.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon tech-icon-bg pulse-ring"><i class="fas fa-database"></i></div>
-              <h4>Database Engineering</h4>
-              <p>Designing and optimizing SQL Server, MySQL, PostgreSQL, MongoDB, and Firebase databases. Query optimization, data modeling, and migration strategies.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon tech-icon-bg pulse-ring"><i class="fab fa-wordpress"></i></div>
-              <h4>WordPress &amp; CMS</h4>
-              <p>Custom WordPress themes and plugins, WooCommerce e-commerce setups, SEO optimization, and ongoing maintenance for business clients.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== MUSIC PANEL ===== -->
-      <div class="career-panel" id="panel-music">
-        <div class="row g-4 align-items-center mb-5" data-aos="fade-up">
-          <div class="col-lg-6">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="equalizer">
-                <div class="equalizer-bar"></div>
-                <div class="equalizer-bar"></div>
-                <div class="equalizer-bar"></div>
-                <div class="equalizer-bar"></div>
-                <div class="equalizer-bar"></div>
-              </div>
-              <h3 class="mb-0 career-journey-title--music">The Music Journey</h3>
-            </div>
-            <p class="career-journey-text">
-              Music is where I channel raw emotion into sound. As a producer and artist, I craft beats and lyrics that
-              blend Amapiano, Hip-Hop, and Afro-Soul influences. Every track is a story — coded in rhythm instead of
-              syntax. My journey in music has taught me discipline, creativity, and the art of connecting with people
-              on a deeper level.
-            </p>
-            <p class="career-meta-text">
-              <strong class="career-meta-label">Genre:</strong> Amapiano &bull; Hip-Hop &bull; Afro-Soul<br>
-              <strong class="career-meta-label">Role:</strong> Producer &bull; Vocalist &bull; Songwriter
-            </p>
-
-            <!-- Streaming links - update href with your real links -->
-            <div class="platform-links">
-              <a href="#" class="platform-link" target="_blank" rel="noopener">
-                <i class="fab fa-spotify"></i> Spotify
-              </a>
-              <a href="#" class="platform-link" target="_blank" rel="noopener">
-                <i class="fab fa-apple"></i> Apple Music
-              </a>
-              <a href="#" class="platform-link" target="_blank" rel="noopener">
-                <i class="fab fa-soundcloud"></i> SoundCloud
-              </a>
-              <a href="#" class="platform-link" target="_blank" rel="noopener">
-                <i class="fab fa-youtube"></i> YouTube Music
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <!-- Embed placeholder — replace src with your Spotify/SoundCloud embed -->
-            <div class="music-embed-wrapper" data-aos="fade-left">
-              <p class="text-center mb-3 career-embed-label">
-                <i class="fas fa-compact-disc fa-spin me-2"></i>Latest Release
-              </p>
-              <!-- Replace the iframe src below with your actual Spotify embed URL -->
-              <iframe 
-                class="career-embed-iframe" 
-                src="https://open.spotify.com/embed/artist/placeholder?utm_source=generator&theme=0" 
-                height="352" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy"
-                title="Spotify music player embed">
-              </iframe>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 stagger-reveal">
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon music-icon-bg pulse-ring"><i class="fas fa-microphone-alt"></i></div>
-              <h4>Recording &amp; Vocals</h4>
-              <p>Vocal recording, layering harmonies, and crafting lyrical content that resonates. From the booth to the final mix.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon music-icon-bg pulse-ring"><i class="fas fa-sliders-h"></i></div>
-              <h4>Production &amp; Mixing</h4>
-              <p>Beat-making and sound design using FL Studio / Ableton. Mixing and mastering tracks to industry-standard quality.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon music-icon-bg pulse-ring"><i class="fas fa-users"></i></div>
-              <h4>Collaborations &amp; Live</h4>
-              <p>Working with local artists, producers, and DJs. Live performances and building a community around authentic sound.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon music-icon-bg pulse-ring"><i class="fas fa-compact-disc"></i></div>
-              <h4>Discography &amp; Releases</h4>
-              <p>Singles, EPs, and collaborative projects released across all major streaming platforms. Each release marks a new chapter.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon music-icon-bg pulse-ring"><i class="fas fa-pen-fancy"></i></div>
-              <h4>Songwriting</h4>
-              <p>Crafting lyrics and melodies that tell stories from lived experience — love, hustle, growth, and the South African journey.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon music-icon-bg pulse-ring"><i class="fas fa-share-alt"></i></div>
-              <h4>Distribution &amp; Branding</h4>
-              <p>Digital distribution across Spotify, Apple Music, YouTube, and more. Building a personal brand and engaging fans through social media.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== FOREX PANEL ===== -->
-      <div class="career-panel" id="panel-forex">
-        <div class="row g-4 align-items-center mb-5" data-aos="fade-up">
-          <div class="col-lg-6">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <!-- Decorative candlesticks -->
-              <div class="candlestick-deco">
-                <div class="candle bullish"></div>
-                <div class="candle bearish"></div>
-                <div class="candle bullish"></div>
-                <div class="candle bullish"></div>
-                <div class="candle bearish"></div>
-                <div class="candle bullish"></div>
-                <div class="candle bearish"></div>
-                <div class="candle bullish"></div>
-              </div>
-              <h3 class="mb-0 career-journey-title--forex">The Trading Journey</h3>
-            </div>
-            <p class="career-journey-text">
-              Forex trading is where discipline meets opportunity. I approach the markets with a systematic mindset —
-              combining technical analysis, price action, and risk management to identify high-probability setups.
-              The same analytical thinking that drives my software engineering fuels my trading strategy. It's about
-              patience, pattern recognition, and continuous learning.
-            </p>
-            <p class="career-meta-text">
-              <strong class="career-meta-label">Markets:</strong> EUR/USD &bull; GBP/USD &bull; USD/JPY &bull; Gold (XAU/USD) &bull; US30<br>
-              <strong class="career-meta-label">Style:</strong> Swing Trading &bull; Price Action &bull; Smart Money Concepts<br>
-              <strong class="career-meta-label">Platforms:</strong> MetaTrader 5 &bull; TradingView
-            </p>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <!-- Decorative SVG chart -->
-            <div class="music-embed-wrapper text-center">
-              <svg viewBox="0 0 500 200" class="career-chart-svg" aria-label="Decorative trading chart line">
-                <defs>
-                  <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#34d399" stop-opacity="1" />
-                    <stop offset="100%" stop-color="#64b5f6" stop-opacity="1" />
-                  </linearGradient>
-                </defs>
-                <polyline 
-                  class="chart-line-anim"
-                  fill="none" 
-                  stroke="url(#chartGrad)" 
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  points="10,150 50,130 90,140 130,90 170,100 210,60 250,80 290,40 330,70 370,30 410,50 450,20 490,35" />
-                <text x="250" y="185" text-anchor="middle" fill="rgba(200,210,230,0.5)" font-size="12">Continuous Growth Through Discipline</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 stagger-reveal">
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon forex-icon-bg pulse-ring"><i class="fas fa-chart-line"></i></div>
-              <h4>Technical Analysis</h4>
-              <p>Reading price charts, identifying support/resistance levels, trend lines, Fibonacci retracements, and key chart patterns to time market entries.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon forex-icon-bg pulse-ring"><i class="fas fa-crosshairs"></i></div>
-              <h4>Price Action &amp; SMC</h4>
-              <p>Focusing on raw price movement, order blocks, liquidity zones, and Smart Money Concepts to understand institutional trading behavior.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon forex-icon-bg pulse-ring"><i class="fas fa-shield-alt"></i></div>
-              <h4>Risk Management</h4>
-              <p>Capital preservation is king. Strict risk-to-reward ratios, position sizing, and trading only when the setup aligns with the plan.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon forex-icon-bg pulse-ring"><i class="fas fa-book-open"></i></div>
-              <h4>Trading Journal &amp; Review</h4>
-              <p>Documenting every trade — entries, exits, emotions, and lessons. Backtesting strategies and refining the edge through data-driven review.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon forex-icon-bg pulse-ring"><i class="fas fa-graduation-cap"></i></div>
-              <h4>Continuous Education</h4>
-              <p>Constantly studying market microstructure, macroeconomics, and trading psychology. Learning from mentors, courses, and real-time market experience.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="career-feature-card tilt-card">
-              <div class="career-feature-icon forex-icon-bg pulse-ring"><i class="fas fa-users-cog"></i></div>
-              <h4>Community &amp; Mentorship</h4>
-              <p>Sharing knowledge with aspiring traders, participating in trading communities, and building accountability through group analysis sessions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="py-5">
-    <div class="container">
-      <h2 class="section-heading text-center text-lg-start mb-5" data-aos="fade-up">Skills &amp; Tooling</h2>
-
-      <div class="row g-4">
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="skill-block h-100">
-            <div class="skill-block-header">
-              <i class="fas fa-code"></i>
-              <div>
-                <h3>Programming &amp; Web</h3>
-                <p>Full-Stack Development</p>
-              </div>
-            </div>
-            <div class="skill-pill-group">
-              <span class="skill-pill">C#</span>
-              <span class="skill-pill">ASP.NET Core MVC</span>
-              <span class="skill-pill">React JS</span>
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">Node.js</span>
-              <span class="skill-pill">AI & Prompt Engineering</span>
-              <span class="skill-pill">HTML</span>
-              <span class="skill-pill">CSS</span>
-              <span class="skill-pill">Bootstrap</span>
-              <span class="skill-pill">WordPress</span>
-              <span class="skill-pill">GitHub</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="skill-block h-100">
-            <div class="skill-block-header">
-              <i class="fas fa-cloud"></i>
-              <div>
-                <h3>Cloud &amp; Databases</h3>
-                <p>Infrastructure & Data</p>
-              </div>
-            </div>
-            <div class="skill-pill-group">
-              <span class="skill-pill skill-pill-success">Azure</span>
-              <span class="skill-pill skill-pill-success">AWS</span>
-              <span class="skill-pill skill-pill-success">SQL Server</span>
-              <span class="skill-pill skill-pill-success">MySQL</span>
-              <span class="skill-pill skill-pill-success">PostgreSQL</span>
-              <span class="skill-pill skill-pill-success">MongoDB</span>
-              <span class="skill-pill skill-pill-success">SQLite</span>
-              <span class="skill-pill skill-pill-success">Firebase</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="skill-block h-100">
-            <div class="skill-block-header">
-              <i class="fas fa-network-wired"></i>
-              <div>
-                <h3>Networking &amp; IT Support</h3>
-                <p>Infrastructure Management</p>
-              </div>
-            </div>
-            <div class="skill-pill-group">
-              <span class="skill-pill skill-pill-purple">Wi-Fi Portals (HSNM)</span>
-              <span class="skill-pill skill-pill-purple">Routing & Switching</span>
-              <span class="skill-pill skill-pill-purple">Linux Networking</span>
-              <span class="skill-pill skill-pill-purple">Cisco Packet Tracer</span>
-              <span class="skill-pill skill-pill-purple">Microsoft 365</span>
-              <span class="skill-pill skill-pill-purple">Linux (Kali & Ubuntu)</span>
-              <span class="skill-pill skill-pill-purple">UiPath Automation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-          <div class="skill-block h-100">
-            <div class="skill-block-header">
-              <i class="fas fa-certificate"></i>
-              <div>
-                <h3>Certifications</h3>
-                <p>Professional Qualifications</p>
-              </div>
-            </div>
-            <div class="skill-pill-group">
-              <span class="skill-pill skill-pill-gold">AWS Cloud Practitioner</span>
-              <span class="skill-pill skill-pill-gold">Microsoft 365 Certified: Fundamentals</span>
-              <span class="skill-pill skill-pill-gold">Microsoft Azure Fundamentals</span>
-              <span class="skill-pill skill-pill-gold">Ethical Hacking</span>
-              <span class="skill-pill skill-pill-gold">Web Development Bootcamp</span>
-              <span class="skill-pill skill-pill-gold">ASP.NET MVC 5</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5 " data-aos="fade-up">Experience & Education</h2>
-
-      <div class="timeline-container">
-        <!-- Experience Items -->
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="text-white">Technical Support & Solutions Architecture Intern</h3>
-              <span class="timeline-date">2024 - Current</span>
-            </div>
-            <div class="timeline-company">Konecta</div>
-            <div class="timeline-description">
-              <p>Providing comprehensive IT support and developing custom web solutions for business clients.</p>
-              <ul class="timeline-achievements">
-                <li>Performed IT onboarding, including creation of Microsoft accounts, email accounts, and assigning
-                  licences.</li>
-                <li>Resolved password resets, email issues, and Microsoft 365 user management tasks.</li>
-                <li>Installed, configured, and supported Wi-Fi captive portals for clients using HSNM and custom setups.
-                </li>
-                <li>Designed and developed WordPress websites for business clients and provided maintenance support.</li>
-                <li>Designed, coded, and deployed custom web systems and dashboards based on client requirements.</li>
-                <li>Managed and monitored hosted servers with the CSP, resolving downtime incidents.</li>
-              </ul>
-              <div class="timeline-tech">
-                <span class="tech-tag">Microsoft 365</span>
-                <span class="tech-tag">Wi-Fi Portals</span>
-                <span class="tech-tag">WordPress</span>
-                <span class="tech-tag">Server Management</span>
-                <span class="tech-tag">Network Troubleshooting</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="text-white">IT Technician (Seasonal)</h3>
-              <span class="timeline-date">Seasonal Contract</span>
-            </div>
-            <div class="timeline-company">Mahlwalerwa (Pty) Ltd</div>
-            <div class="timeline-description">
-              <p>Delivered on-site and remote technical support for hardware and network infrastructure.</p>
-              <ul class="timeline-achievements">
-                <li>Provided hardware support, including PC repairs, Windows installations, and troubleshooting.</li>
-                <li>Set up Office 365 environments, user accounts, and shared network configurations.</li>
-                <li>Installed and configured network printers and shared printing services.</li>
-                <li>Supported teams with LAN configuration and network troubleshooting.</li>
-              </ul>
-              <div class="timeline-tech">
-                <span class="tech-tag">Hardware Support</span>
-                <span class="tech-tag">Office 365</span>
-                <span class="tech-tag">LAN Configuration</span>
-                <span class="tech-tag">Windows Installation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="text-white">BSc in Information Technology</h3>
-              <span class="timeline-date">2022</span>
-            </div>
-            <div class="timeline-company">North-West University</div>
-            <div class="timeline-description">
-              <p>Comprehensive study in computer science fundamentals, database management, networking, and
-                information security.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3 class="text-white">Technical Qualifications</h3>
-              <span class="timeline-date">2016 - 2024</span>
-            </div>
-            <div class="timeline-company">Various Institutions</div>
-            <div class="timeline-description">
-              <ul class="timeline-achievements">
-                <li><strong>Electrical Trade Test (2024)</strong> – Indlela Trade Centre</li>
-                <li><strong>Electrical Engineering N3 (2024)</strong> – Morning Star Technical College</li>
-                <li><strong>Electrical Engineering N2 (2016)</strong> – Capricorn TVET College</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Featured Projects Section ===== -->
-  <section id="projects" class="py-5 nightsky-bg">
-    <div class="container">
-      <h2 class="section-title text-center mb-3 gradient-text" data-aos="fade-up">Featured Projects</h2>
-      <p class="text-center mb-5 career-subtitle" data-aos="fade-up" data-aos-delay="100">
-        A selection of my recent work. Visit the full projects page for everything I've built.
-      </p>
-
-      <div class="row g-4">
-
-        <!-- Card 1: Vastly Sage -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
-          <a href="https://vastlysage.com" class="text-decoration-none" target="_blank" rel="noopener">
-            <div class="card h-100 project-card">
-              <img src="Projects/Vastly Sage/vastlySage.png" class="card-img-top" alt="Vastly Sage website screenshot">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Vastly Sage Website</h5>
-                <p class="card-text flex-grow-1 text-white">
-                  Responsive website for Vastly Sage — front-end design and implementation.
-                </p>
-
-                <div class="mt-3 mb-2">
-                  <div class="fw-semibold mb-2 tech-title">Tech Stack</div>
-                  <div class="tech-scroll">
-                    <div class="tech-track">
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                        <div class="tech-label">HTML5</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
-                        <div class="tech-label">Bootstrap</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                        <div class="tech-label">CSS3</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg" alt="WooCommerce">
-                        <div class="tech-label">WooCommerce</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <div class="tech-label">JavaScript</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress">
-                        <div class="tech-label">WordPress</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="Projects/Vastly Sage/PaidMembershipProLogo.png"
-                          srcset="Projects/Vastly Sage/PaidMembershipProLogo@2x.png 2x" alt="Paid Memberships Pro">
-                        <div class="tech-label">Paid Memberships Pro</div>
-                      </div>
-                      <!-- duplicate for seamless loop -->
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                        <div class="tech-label">HTML5</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
-                        <div class="tech-label">Bootstrap</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                        <div class="tech-label">CSS3</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg" alt="WooCommerce">
-                        <div class="tech-label">WooCommerce</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <div class="tech-label">JavaScript</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress">
-                        <div class="tech-label">WordPress</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="Projects/Vastly Sage/PaidMembershipProLogo.png"
-                          srcset="Projects/Vastly Sage/PaidMembershipProLogo@2x.png 2x" alt="Paid Memberships Pro">
-                        <div class="tech-label">Paid Memberships Pro</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <span class="btn btn-sm btn-outline-primary mt-auto">Explore →</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Card 2: Konecta -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://konecta.co.za/" class="text-decoration-none" target="_blank" rel="noopener">
-            <div class="card h-100 project-card">
-              <img src="Projects/Konecta/KonectaWebsite.png" class="card-img-top" alt="Konecta website screenshot">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Konecta Website</h5>
-                <p class="card-text flex-grow-1">
-                  Corporate website redesign with e-commerce integrations.
-                </p>
-
-                <div class="mt-3 mb-2">
-                  <div class="fw-semibold mb-2 tech-title">Tech Stack</div>
-                  <div class="tech-scroll">
-                    <div class="tech-track">
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg" alt="WooCommerce">
-                        <div class="tech-label">WooCommerce</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://img.icons8.com/ios-filled/50/000000/ticket.png" alt="Tickera">
-                        <div class="tech-label">Tickera</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
-                        <div class="tech-label">Bootstrap</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                        <div class="tech-label">CSS3</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <div class="tech-label">JavaScript</div>
-                      </div>
-                      <!-- duplicate for seamless loop -->
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg" alt="WooCommerce">
-                        <div class="tech-label">WooCommerce</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://img.icons8.com/ios-filled/50/000000/ticket.png" alt="Tickera">
-                        <div class="tech-label">Tickera</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap">
-                        <div class="tech-label">Bootstrap</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                        <div class="tech-label">CSS3</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <div class="tech-label">JavaScript</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <span class="btn btn-sm btn-outline-primary mt-auto">Explore →</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Card 3: Adapt IT RSVP Portal -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <a href="https://adaptit.konecta.co.za/" class="text-decoration-none" target="_blank" rel="noopener">
-            <div class="card h-100 project-card">
-              <img src="Projects/AdpatIT/AdaptITCover.png" class="card-img-top" alt="Adapt IT Cover image">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Adapt IT Year-End RSVP Portal</h5>
-                <p class="card-text flex-grow-1">
-                  Responsive web RSVP system with admin panel, Google Sheets integration, and email notifications.
-                </p>
-
-                <div class="mt-3 mb-2">
-                  <div class="fw-semibold mb-2 tech-title">Tech Stack</div>
-                  <div class="tech-scroll">
-                    <div class="tech-track">
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                        <div class="tech-label">HTML5</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                        <div class="tech-label">CSS3</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap 5">
-                        <div class="tech-label">Bootstrap 5</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <div class="tech-label">JavaScript</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google">
-                        <div class="tech-label">Apps Script</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlesheets.svg" alt="Google Sheets">
-                        <div class="tech-label">Sheets</div>
-                      </div>
-                      <!-- duplicate for seamless loop -->
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                        <div class="tech-label">HTML5</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                        <div class="tech-label">CSS3</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap 5">
-                        <div class="tech-label">Bootstrap 5</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        <div class="tech-label">JavaScript</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google">
-                        <div class="tech-label">Apps Script</div>
-                      </div>
-                      <div class="text-center tech-item">
-                        <img class="tech-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlesheets.svg" alt="Google Sheets">
-                        <div class="tech-label">Sheets</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <span class="btn btn-sm btn-outline-primary mt-auto">Explore →</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div><!-- /.row -->
-
-      <div class="text-center mt-5" data-aos="fade-up">
-        <a href="projects.html" class="btn btn-lg btn-outline-custom">
-          <i class="fas fa-th-large me-2"></i>View All Projects
+  <body
+    class="night-sky-body"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar"
+    data-bs-offset="70"
+  >
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+          <img
+            src="images/mainLogo.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="me-2"
+          />
+          Silas Matabane
         </a>
+
+        <div class="d-flex align-items-center order-lg-3">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#careers">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">All Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
 
-    </div><!-- /.container -->
-  </section>
+    <!-- Hero Section -->
+    <header id="home" class="hero-section nightsky-bg">
+      <div class="container position-relative">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7" data-aos="fade-up">
+            <span class="badge rounded-pill text-bg-light px-3 py-2 mb-3 mt-3"
+              >Software Developer &amp; IT Technician &amp; Music Artist &amp;
+              Forex Trader</span
+            >
+            <h1 class="display-4 fw-bold mb-3">Matabane Mpako Silas</h1>
+            <h2 class="text-primary mb-4">
+              Full-Stack Developer | Music Artist | Forex Trader
+            </h2>
+            <p class="lead text-light mb-4">
+              Multi-disciplinary creative and technologist with 4+ years of
+              experience in IT infrastructure, web development, cloud
+              environments, music production, and financial market analysis.
+              Skilled in C#, ASP.NET Core, JavaScript, React, Node.js, SQL,
+              Azure, AWS — and equally passionate about creating music and
+              trading the forex markets.
+            </p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-5" data-aos="fade-up">Let's Work Together</h2>
+            <div class="d-flex flex-wrap gap-3 hero-actions">
+              <a
+                class="btn btn-primary btn-lg"
+                href="Projects/CV/Silas Matabane Online CV.html"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open interactive CV in a new tab"
+              >
+                <i class="fas fa-arrow-up-right-from-square me-2"></i>View
+                Interactive CV
+              </a>
+              <a
+                class="btn btn-outline-light btn-lg"
+                href="Projects/CV/Matabane Mpako Silas - CV.pdf"
+                download
+                aria-label="Download PDF version of CV"
+              >
+                <i class="fas fa-file-download me-2"></i>Download PDF CV
+              </a>
+              <a
+                class="btn btn-dark btn-lg"
+                href="#contact"
+                aria-label="Jump to contact section"
+              >
+                <i class="fas fa-paper-plane me-2"></i>Let’s Collaborate
+              </a>
+            </div>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="contact-content text-center" data-aos="fade-up" data-aos-delay="100">
-            <p class="lead mb-4">Ready to bring your ideas to life? I'm always excited to work on new projects and
-              collaborate with amazing people.</p>
-
-            <div class="contact-methods row g-4 mb-5">
-              <div class="col-md-4">
-                <div class="contact-method">
-                  <i class="fas fa-envelope contact-icon"></i>
-                  <h4>Email</h4>
-                  <a href="mailto:tetelosilas@gmail.com" class="contact-link">tetelosilas@gmail.com</a>
+            <div
+              class="row g-3 mt-4 hero-contact"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-phone text-primary"></i>
+                  <a
+                    href="tel:+27729776467"
+                    class="text-decoration-none text-light"
+                    >+27&nbsp;72&nbsp;977&nbsp;6467</a
+                  >
                 </div>
               </div>
-
-              <div class="col-md-4">
-                <div class="contact-method">
-                  <i class="fab fa-linkedin contact-icon"></i>
-                  <h4>LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/silas-tetelo-matabane-TT" target="_blank" rel="noopener"
-                    class="contact-link">Connect with me</a>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-envelope text-primary"></i>
+                  <a
+                    href="mailto:tetelosilas@gmail.com"
+                    class="text-decoration-none text-light"
+                    >tetelosilas@gmail.com</a
+                  >
                 </div>
               </div>
-
-              <div class="col-md-4">
-                <div class="contact-method">
-                  <i class="fab fa-github contact-icon"></i>
-                  <h4>GitHub</h4>
-                  <a href="https://github.com/Silas-Matabane" target="_blank" rel="noopener" class="contact-link">View
-                    my code</a>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  <span class="text-light">Tembisa, South Africa</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="fab fa-linkedin text-primary"></i>
+                  <a
+                    href="https://www.linkedin.com/in/silas-tetelo-matabane-TT"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-decoration-none text-light"
+                    aria-label="LinkedIn profile"
+                    >LinkedIn</a
+                  >
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="cta-section">
-              <h3 class="mb-3">Ready to start your project?</h3>
-              <p class="mb-4">Let's discuss how I can help you build something amazing.</p>
-              <a href="mailto:tetelosilas@gmail.com" class="btn btn-primary btn-lg">
-                <i class="fas fa-paper-plane me-2"></i>Get In Touch
-              </a>
+          <div class="col-lg-5 text-center" data-aos="fade-left">
+            <img
+              src="images/profile-pic.jpg"
+              alt="Silas Matabane - Software Developer"
+              class="profile-img img-fluid rounded-circle shadow-lg mb-4 morph-border"
+            />
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator d-none d-lg-block">
+          <div class="mouse"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 blob-bg">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7" data-aos="fade-right">
+            <h2 class="section-heading mb-4 reveal-line">
+              Professional Summary
+            </h2>
+            <p class="lead text-muted mb-4">
+              Experienced in desktop support, network troubleshooting, Wi-Fi
+              captive portals, server maintenance, and building custom systems
+              for clients. A forward-thinking problem-solver who leverages
+              AI-augmented workflows and prompt engineering to maximize
+              productivity and deliver modern, scalable solutions. Beyond tech,
+              I express creativity through music and build financial
+              independence through forex trading.
+            </p>
+
+            <!-- Stats Counter -->
+            <div class="stat-counter" data-aos="fade-up" data-aos-delay="200">
+              <div class="stat-item">
+                <div class="stat-number" data-count="4">0</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-count="6">0</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-count="3">0</div>
+                <div class="stat-label">Career Paths</div>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="card border-0 shadow-sm h-100 tilt-card glow-hover">
+                  <div class="card-body">
+                    <h3 class="h6 text-uppercase text-muted">
+                      Core Competencies
+                    </h3>
+                    <p class="mb-0">
+                      IT Support & Helpdesk, Network Troubleshooting, Microsoft
+                      365 Administration, Wi-Fi Portals (HSNM), Server
+                      Maintenance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card border-0 shadow-sm h-100 tilt-card glow-hover">
+                  <div class="card-body">
+                    <h3 class="h6 text-uppercase text-muted">
+                      Technical Focus
+                    </h3>
+                    <p class="mb-0">
+                      Full-Stack Development, Cloud Computing (Azure & AWS),
+                      AI-Integrated Workflows, System Integration & Automation,
+                      SQL Databases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="card border-0 shadow-sm tilt-card glow-hover">
+              <div class="card-body p-4">
+                <h3 class="h5 mb-3">Career Snapshot</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3 d-flex gap-3">
+                    <i class="fas fa-briefcase text-primary mt-1"></i>
+                    <span
+                      >Technical Support &amp; Solutions Architecture Intern at
+                      Konecta (2024&nbsp;– Current)</span
+                    >
+                  </li>
+                  <li class="mb-3 d-flex gap-3">
+                    <i class="fas fa-tools text-primary mt-1"></i>
+                    <span
+                      >IT Technician (Seasonal) at Mahlwalerwa (Pty) Ltd.</span
+                    >
+                  </li>
+                  <li class="mb-3 d-flex gap-3">
+                    <i class="fas fa-music text-primary mt-1"></i>
+                    <span>Music Artist — Producer &amp; Performer</span>
+                  </li>
+                  <li class="mb-3 d-flex gap-3">
+                    <i class="fas fa-chart-line text-primary mt-1"></i>
+                    <span
+                      >Forex Trader — Technical &amp; Price Action
+                      Analysis</span
+                    >
+                  </li>
+                  <li class="d-flex gap-3">
+                    <i class="fas fa-graduation-cap text-primary mt-1"></i>
+                    <span
+                      >BSc Information Technology, North West University
+                      (2022).</span
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-4 bg-dark text-white">
-    <div class="container text-center">
-      <div class="social-icons mb-3">
-        <!-- Keep existing / important links -->
-        <a href="https://github.com/Silas-Matabane" target="_blank" class="mx-2" rel="noopener" aria-label="GitHub Profile"><i
-            class="fab fa-github fa-2x"></i></a>
-        <a href="https://www.linkedin.com/in/silas-tetelo-matabane-TT" target="_blank" class="mx-2" rel="noopener" aria-label="LinkedIn Profile"><i
-            class="fab fa-linkedin fa-2x"></i></a>
+    <!-- ===== Careers Section ===== -->
+    <section id="careers" class="py-5 nightsky-bg blob-bg">
+      <div class="container career-tabs">
+        <h2
+          class="section-title text-center mb-3 gradient-text"
+          data-aos="fade-up"
+        >
+          My Career Paths
+        </h2>
+        <p
+          class="text-center mb-5 career-subtitle"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          I wear many hats — from building software systems, to producing music,
+          to analyzing financial markets. Explore each path below.
+        </p>
 
-        <!-- Additional social icons (same set as hero) -->
-        <a href="https://www.instagram.com/tetelo_matabane/" class="mx-2" aria-label="Instagram" rel="noopener"><i
-            class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://web.facebook.com/tetelo.matabane.2025/" class="mx-2" aria-label="Facebook" rel="noopener"><i
-            class="fab fa-facebook fa-2x"></i></a>
-        <a href="https://x.com/MpakoSilas" class="mx-2" aria-label="Twitter" rel="noopener"><i
-            class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://www.tiktok.com/@tetelomatabanett" class="mx-2" aria-label="TikTok" rel="noopener"><i
-            class="fab fa-tiktok fa-2x"></i></a>
+        <!-- Tab Navigation -->
+        <div class="career-tab-nav" data-aos="fade-up" data-aos-delay="150">
+          <button class="career-tab-btn active" data-tab="tech">
+            <i class="fas fa-code"></i>Software &amp; IT
+          </button>
+          <button class="career-tab-btn" data-tab="music">
+            <i class="fas fa-headphones-alt"></i>Music
+          </button>
+          <button class="career-tab-btn" data-tab="forex">
+            <i class="fas fa-chart-candlestick"></i>Forex Trading
+          </button>
+        </div>
 
-        <!-- optional other -->
-        <a href="https://www.youtube.com/channel/UC56rTfEeTExksx-BSmQ2ygw" target="_blank" class="mx-2"
-          rel="noopener" aria-label="YouTube Channel"><i class="fab fa-youtube fa-2x"></i></a>
+        <!-- ===== TECH PANEL ===== -->
+        <div class="career-panel active" id="panel-tech">
+          <div class="row g-4 stagger-reveal">
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon tech-icon-bg pulse-ring">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <h4>Full-Stack Development</h4>
+                <p>
+                  Building responsive web applications with C#, ASP.NET Core
+                  MVC, React, Node.js, and modern JavaScript frameworks. From
+                  pixel-perfect front-ends to robust back-end APIs.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon tech-icon-bg pulse-ring">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <h4>Cloud &amp; DevOps</h4>
+                <p>
+                  Deploying and managing infrastructure on Azure and AWS. CI/CD
+                  pipelines, containerization, server monitoring, and scalable
+                  cloud architecture.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon tech-icon-bg pulse-ring">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h4>IT Support &amp; Networking</h4>
+                <p>
+                  Desktop support, Wi-Fi captive portal deployment (HSNM),
+                  Microsoft 365 administration, LAN configuration, and server
+                  maintenance for enterprise clients.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon tech-icon-bg pulse-ring">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <h4>AI &amp; Automation</h4>
+                <p>
+                  Leveraging AI-augmented workflows, prompt engineering, GitHub
+                  Copilot, and UiPath to automate repetitive tasks and
+                  accelerate delivery.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon tech-icon-bg pulse-ring">
+                  <i class="fas fa-database"></i>
+                </div>
+                <h4>Database Engineering</h4>
+                <p>
+                  Designing and optimizing SQL Server, MySQL, PostgreSQL,
+                  MongoDB, and Firebase databases. Query optimization, data
+                  modeling, and migration strategies.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon tech-icon-bg pulse-ring">
+                  <i class="fab fa-wordpress"></i>
+                </div>
+                <h4>WordPress &amp; CMS</h4>
+                <p>
+                  Custom WordPress themes and plugins, WooCommerce e-commerce
+                  setups, SEO optimization, and ongoing maintenance for business
+                  clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== MUSIC PANEL ===== -->
+        <div class="career-panel" id="panel-music">
+          <div class="row g-4 align-items-center mb-5" data-aos="fade-up">
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="equalizer">
+                  <div class="equalizer-bar"></div>
+                  <div class="equalizer-bar"></div>
+                  <div class="equalizer-bar"></div>
+                  <div class="equalizer-bar"></div>
+                  <div class="equalizer-bar"></div>
+                </div>
+                <h3 class="mb-0 career-journey-title--music">
+                  The Music Journey
+                </h3>
+              </div>
+              <p class="career-journey-text">
+                Music is where I channel raw emotion into sound. As a producer
+                and artist, I craft beats and lyrics that blend Amapiano,
+                Hip-Hop, and Afro-Soul influences. Every track is a story —
+                coded in rhythm instead of syntax. My journey in music has
+                taught me discipline, creativity, and the art of connecting with
+                people on a deeper level.
+              </p>
+              <p class="career-meta-text">
+                <strong class="career-meta-label">Genre:</strong> Amapiano
+                &bull; Hip-Hop &bull; Afro-Soul<br />
+                <strong class="career-meta-label">Role:</strong> Producer &bull;
+                Vocalist &bull; Songwriter
+              </p>
+
+              <!-- Streaming links - update href with your real links -->
+              <div class="platform-links">
+                <a
+                  href="#"
+                  class="platform-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-spotify"></i> Spotify
+                </a>
+                <a
+                  href="#"
+                  class="platform-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-apple"></i> Apple Music
+                </a>
+                <a
+                  href="#"
+                  class="platform-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-soundcloud"></i> SoundCloud
+                </a>
+                <a
+                  href="#"
+                  class="platform-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-youtube"></i> YouTube Music
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <!-- Embed placeholder — replace src with your Spotify/SoundCloud embed -->
+              <div class="music-embed-wrapper" data-aos="fade-left">
+                <p class="text-center mb-3 career-embed-label">
+                  <i class="fas fa-compact-disc fa-spin me-2"></i>Latest Release
+                </p>
+                <iframe
+                  class="career-embed-iframe"
+                  src="https://www.tiktok.com/embed/v2/7621981582949387541"
+                  height="352"
+                  allow="
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    fullscreen;
+                    picture-in-picture;
+                  "
+                  loading="lazy"
+                  title="TikTok video embed"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 stagger-reveal">
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon music-icon-bg pulse-ring">
+                  <i class="fas fa-microphone-alt"></i>
+                </div>
+                <h4>Recording &amp; Vocals</h4>
+                <p>
+                  Vocal recording, layering harmonies, and crafting lyrical
+                  content that resonates. From the booth to the final mix.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon music-icon-bg pulse-ring">
+                  <i class="fas fa-sliders-h"></i>
+                </div>
+                <h4>Production &amp; Mixing</h4>
+                <p>
+                  Beat-making and sound design using FL Studio / Ableton. Mixing
+                  and mastering tracks to industry-standard quality.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon music-icon-bg pulse-ring">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h4>Collaborations &amp; Live</h4>
+                <p>
+                  Working with local artists, producers, and DJs. Live
+                  performances and building a community around authentic sound.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon music-icon-bg pulse-ring">
+                  <i class="fas fa-compact-disc"></i>
+                </div>
+                <h4>Discography &amp; Releases</h4>
+                <p>
+                  Singles, EPs, and collaborative projects released across all
+                  major streaming platforms. Each release marks a new chapter.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon music-icon-bg pulse-ring">
+                  <i class="fas fa-pen-fancy"></i>
+                </div>
+                <h4>Songwriting</h4>
+                <p>
+                  Crafting lyrics and melodies that tell stories from lived
+                  experience — love, hustle, growth, and the South African
+                  journey.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon music-icon-bg pulse-ring">
+                  <i class="fas fa-share-alt"></i>
+                </div>
+                <h4>Distribution &amp; Branding</h4>
+                <p>
+                  Digital distribution across Spotify, Apple Music, YouTube, and
+                  more. Building a personal brand and engaging fans through
+                  social media.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== FOREX PANEL ===== -->
+        <div class="career-panel" id="panel-forex">
+          <div class="row g-4 align-items-center mb-5" data-aos="fade-up">
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <!-- Decorative candlesticks -->
+                <div class="candlestick-deco">
+                  <div class="candle bullish"></div>
+                  <div class="candle bearish"></div>
+                  <div class="candle bullish"></div>
+                  <div class="candle bullish"></div>
+                  <div class="candle bearish"></div>
+                  <div class="candle bullish"></div>
+                  <div class="candle bearish"></div>
+                  <div class="candle bullish"></div>
+                </div>
+                <h3 class="mb-0 career-journey-title--forex">
+                  The Trading Journey
+                </h3>
+              </div>
+              <p class="career-journey-text">
+                Forex trading is where discipline meets opportunity. I approach
+                the markets with a systematic mindset — combining technical
+                analysis, price action, and risk management to identify
+                high-probability setups. The same analytical thinking that
+                drives my software engineering fuels my trading strategy. It's
+                about patience, pattern recognition, and continuous learning.
+              </p>
+              <p class="career-meta-text">
+                <strong class="career-meta-label">Markets:</strong> EUR/USD
+                &bull; GBP/USD &bull; USD/JPY &bull; Gold (XAU/USD) &bull;
+                US30<br />
+                <strong class="career-meta-label">Style:</strong> Swing Trading
+                &bull; Price Action &bull; Smart Money Concepts<br />
+                <strong class="career-meta-label">Platforms:</strong> MetaTrader
+                5 &bull; TradingView
+              </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <!-- Decorative SVG chart -->
+              <div class="music-embed-wrapper text-center">
+                <svg
+                  viewBox="0 0 500 200"
+                  class="career-chart-svg"
+                  aria-label="Decorative trading chart line"
+                >
+                  <defs>
+                    <linearGradient
+                      id="chartGrad"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#34d399" stop-opacity="1" />
+                      <stop
+                        offset="100%"
+                        stop-color="#64b5f6"
+                        stop-opacity="1"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <polyline
+                    class="chart-line-anim"
+                    fill="none"
+                    stroke="url(#chartGrad)"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    points="10,150 50,130 90,140 130,90 170,100 210,60 250,80 290,40 330,70 370,30 410,50 450,20 490,35"
+                  />
+                  <text
+                    x="250"
+                    y="185"
+                    text-anchor="middle"
+                    fill="rgba(200,210,230,0.5)"
+                    font-size="12"
+                  >
+                    Continuous Growth Through Discipline
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 stagger-reveal">
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon forex-icon-bg pulse-ring">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Technical Analysis</h4>
+                <p>
+                  Reading price charts, identifying support/resistance levels,
+                  trend lines, Fibonacci retracements, and key chart patterns to
+                  time market entries.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon forex-icon-bg pulse-ring">
+                  <i class="fas fa-crosshairs"></i>
+                </div>
+                <h4>Price Action &amp; SMC</h4>
+                <p>
+                  Focusing on raw price movement, order blocks, liquidity zones,
+                  and Smart Money Concepts to understand institutional trading
+                  behavior.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon forex-icon-bg pulse-ring">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Risk Management</h4>
+                <p>
+                  Capital preservation is king. Strict risk-to-reward ratios,
+                  position sizing, and trading only when the setup aligns with
+                  the plan.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon forex-icon-bg pulse-ring">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <h4>Trading Journal &amp; Review</h4>
+                <p>
+                  Documenting every trade — entries, exits, emotions, and
+                  lessons. Backtesting strategies and refining the edge through
+                  data-driven review.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon forex-icon-bg pulse-ring">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>Continuous Education</h4>
+                <p>
+                  Constantly studying market microstructure, macroeconomics, and
+                  trading psychology. Learning from mentors, courses, and
+                  real-time market experience.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="career-feature-card tilt-card">
+                <div class="career-feature-icon forex-icon-bg pulse-ring">
+                  <i class="fas fa-users-cog"></i>
+                </div>
+                <h4>Community &amp; Mentorship</h4>
+                <p>
+                  Sharing knowledge with aspiring traders, participating in
+                  trading communities, and building accountability through group
+                  analysis sessions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="mb-0">&copy; 2026 Matabane Mpako Silas. All rights reserved.</p>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Back to Top Button -->
-  <a href="#" class="btn btn-primary back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2
+          class="section-heading text-center text-lg-start mb-5"
+          data-aos="fade-up"
+        >
+          Skills &amp; Tooling
+        </h2>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Custom JS -->
-  <script src="script.js"></script>
-</body>
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-block h-100">
+              <div class="skill-block-header">
+                <i class="fas fa-code"></i>
+                <div>
+                  <h3>Programming &amp; Web</h3>
+                  <p>Full-Stack Development</p>
+                </div>
+              </div>
+              <div class="skill-pill-group">
+                <span class="skill-pill">C#</span>
+                <span class="skill-pill">ASP.NET Core MVC</span>
+                <span class="skill-pill">React JS</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">AI & Prompt Engineering</span>
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+                <span class="skill-pill">Bootstrap</span>
+                <span class="skill-pill">WordPress</span>
+                <span class="skill-pill">GitHub</span>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-block h-100">
+              <div class="skill-block-header">
+                <i class="fas fa-cloud"></i>
+                <div>
+                  <h3>Cloud &amp; Databases</h3>
+                  <p>Infrastructure & Data</p>
+                </div>
+              </div>
+              <div class="skill-pill-group">
+                <span class="skill-pill skill-pill-success">Azure</span>
+                <span class="skill-pill skill-pill-success">AWS</span>
+                <span class="skill-pill skill-pill-success">SQL Server</span>
+                <span class="skill-pill skill-pill-success">MySQL</span>
+                <span class="skill-pill skill-pill-success">PostgreSQL</span>
+                <span class="skill-pill skill-pill-success">MongoDB</span>
+                <span class="skill-pill skill-pill-success">SQLite</span>
+                <span class="skill-pill skill-pill-success">Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-block h-100">
+              <div class="skill-block-header">
+                <i class="fas fa-network-wired"></i>
+                <div>
+                  <h3>Networking &amp; IT Support</h3>
+                  <p>Infrastructure Management</p>
+                </div>
+              </div>
+              <div class="skill-pill-group">
+                <span class="skill-pill skill-pill-purple"
+                  >Wi-Fi Portals (HSNM)</span
+                >
+                <span class="skill-pill skill-pill-purple"
+                  >Routing & Switching</span
+                >
+                <span class="skill-pill skill-pill-purple"
+                  >Linux Networking</span
+                >
+                <span class="skill-pill skill-pill-purple"
+                  >Cisco Packet Tracer</span
+                >
+                <span class="skill-pill skill-pill-purple">Microsoft 365</span>
+                <span class="skill-pill skill-pill-purple"
+                  >Linux (Kali & Ubuntu)</span
+                >
+                <span class="skill-pill skill-pill-purple"
+                  >UiPath Automation</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill-block h-100">
+              <div class="skill-block-header">
+                <i class="fas fa-certificate"></i>
+                <div>
+                  <h3>Certifications</h3>
+                  <p>Professional Qualifications</p>
+                </div>
+              </div>
+              <div class="skill-pill-group">
+                <span class="skill-pill skill-pill-gold"
+                  >AWS Cloud Practitioner</span
+                >
+                <span class="skill-pill skill-pill-gold"
+                  >Microsoft 365 Certified: Fundamentals</span
+                >
+                <span class="skill-pill skill-pill-gold"
+                  >Microsoft Azure Fundamentals</span
+                >
+                <span class="skill-pill skill-pill-gold">Ethical Hacking</span>
+                <span class="skill-pill skill-pill-gold"
+                  >Web Development Bootcamp</span
+                >
+                <span class="skill-pill skill-pill-gold">ASP.NET MVC 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Experience & Education
+        </h2>
+
+        <div class="timeline-container">
+          <!-- Experience Items -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="text-white">
+                  Technical Support & Solutions Architecture Intern
+                </h3>
+                <span class="timeline-date">2024 - Current</span>
+              </div>
+              <div class="timeline-company">Konecta</div>
+              <div class="timeline-description">
+                <p>
+                  Providing comprehensive IT support and developing custom web
+                  solutions for business clients.
+                </p>
+                <ul class="timeline-achievements">
+                  <li>
+                    Performed IT onboarding, including creation of Microsoft
+                    accounts, email accounts, and assigning licences.
+                  </li>
+                  <li>
+                    Resolved password resets, email issues, and Microsoft 365
+                    user management tasks.
+                  </li>
+                  <li>
+                    Installed, configured, and supported Wi-Fi captive portals
+                    for clients using HSNM and custom setups.
+                  </li>
+                  <li>
+                    Designed and developed WordPress websites for business
+                    clients and provided maintenance support.
+                  </li>
+                  <li>
+                    Designed, coded, and deployed custom web systems and
+                    dashboards based on client requirements.
+                  </li>
+                  <li>
+                    Managed and monitored hosted servers with the CSP, resolving
+                    downtime incidents.
+                  </li>
+                </ul>
+                <div class="timeline-tech">
+                  <span class="tech-tag">Microsoft 365</span>
+                  <span class="tech-tag">Wi-Fi Portals</span>
+                  <span class="tech-tag">WordPress</span>
+                  <span class="tech-tag">Server Management</span>
+                  <span class="tech-tag">Network Troubleshooting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="text-white">IT Technician (Seasonal)</h3>
+                <span class="timeline-date">Seasonal Contract</span>
+              </div>
+              <div class="timeline-company">Mahlwalerwa (Pty) Ltd</div>
+              <div class="timeline-description">
+                <p>
+                  Delivered on-site and remote technical support for hardware
+                  and network infrastructure.
+                </p>
+                <ul class="timeline-achievements">
+                  <li>
+                    Provided hardware support, including PC repairs, Windows
+                    installations, and troubleshooting.
+                  </li>
+                  <li>
+                    Set up Office 365 environments, user accounts, and shared
+                    network configurations.
+                  </li>
+                  <li>
+                    Installed and configured network printers and shared
+                    printing services.
+                  </li>
+                  <li>
+                    Supported teams with LAN configuration and network
+                    troubleshooting.
+                  </li>
+                </ul>
+                <div class="timeline-tech">
+                  <span class="tech-tag">Hardware Support</span>
+                  <span class="tech-tag">Office 365</span>
+                  <span class="tech-tag">LAN Configuration</span>
+                  <span class="tech-tag">Windows Installation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="text-white">BSc in Information Technology</h3>
+                <span class="timeline-date">2022</span>
+              </div>
+              <div class="timeline-company">North-West University</div>
+              <div class="timeline-description">
+                <p>
+                  Comprehensive study in computer science fundamentals, database
+                  management, networking, and information security.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="text-white">Technical Qualifications</h3>
+                <span class="timeline-date">2016 - 2024</span>
+              </div>
+              <div class="timeline-company">Various Institutions</div>
+              <div class="timeline-description">
+                <ul class="timeline-achievements">
+                  <li>
+                    <strong>Electrical Trade Test (2024)</strong> – Indlela
+                    Trade Centre
+                  </li>
+                  <li>
+                    <strong>Electrical Engineering N3 (2024)</strong> – Morning
+                    Star Technical College
+                  </li>
+                  <li>
+                    <strong>Electrical Engineering N2 (2016)</strong> –
+                    Capricorn TVET College
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Projects Section ===== -->
+    <section id="projects" class="py-5 nightsky-bg">
+      <div class="container">
+        <h2
+          class="section-title text-center mb-3 gradient-text"
+          data-aos="fade-up"
+        >
+          Featured Projects
+        </h2>
+        <p
+          class="text-center mb-5 career-subtitle"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          A selection of my recent work. Visit the full projects page for
+          everything I've built.
+        </p>
+
+        <div class="row g-4">
+          <!-- Card 1: Vastly Sage -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <a
+              href="https://vastlysage.com"
+              class="text-decoration-none"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="card h-100 project-card">
+                <img
+                  src="Projects/Vastly Sage/vastlySage.png"
+                  class="card-img-top"
+                  alt="Vastly Sage website screenshot"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Vastly Sage Website</h5>
+                  <p class="card-text flex-grow-1 text-white">
+                    Responsive website for Vastly Sage — front-end design and
+                    implementation.
+                  </p>
+
+                  <div class="mt-3 mb-2">
+                    <div class="fw-semibold mb-2 tech-title">Tech Stack</div>
+                    <div class="tech-scroll">
+                      <div class="tech-track">
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5"
+                          />
+                          <div class="tech-label">HTML5</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                            alt="Bootstrap"
+                          />
+                          <div class="tech-label">Bootstrap</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                          />
+                          <div class="tech-label">CSS3</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg"
+                            alt="WooCommerce"
+                          />
+                          <div class="tech-label">WooCommerce</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                          />
+                          <div class="tech-label">JavaScript</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                            alt="WordPress"
+                          />
+                          <div class="tech-label">WordPress</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="Projects/Vastly Sage/PaidMembershipProLogo.png"
+                            srcset="Projects/Vastly Sage/PaidMembershipProLogo@2x.png 2x"
+                            alt="Paid Memberships Pro"
+                          />
+                          <div class="tech-label">Paid Memberships Pro</div>
+                        </div>
+                        <!-- duplicate for seamless loop -->
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5"
+                          />
+                          <div class="tech-label">HTML5</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                            alt="Bootstrap"
+                          />
+                          <div class="tech-label">Bootstrap</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                          />
+                          <div class="tech-label">CSS3</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg"
+                            alt="WooCommerce"
+                          />
+                          <div class="tech-label">WooCommerce</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                          />
+                          <div class="tech-label">JavaScript</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                            alt="WordPress"
+                          />
+                          <div class="tech-label">WordPress</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="Projects/Vastly Sage/PaidMembershipProLogo.png"
+                            srcset="Projects/Vastly Sage/PaidMembershipProLogo@2x.png 2x"
+                            alt="Paid Memberships Pro"
+                          />
+                          <div class="tech-label">Paid Memberships Pro</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="btn btn-sm btn-outline-primary mt-auto"
+                    >Explore →</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2: Konecta -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <a
+              href="https://konecta.co.za/"
+              class="text-decoration-none"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="card h-100 project-card">
+                <img
+                  src="Projects/Konecta/KonectaWebsite.png"
+                  class="card-img-top"
+                  alt="Konecta website screenshot"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Konecta Website</h5>
+                  <p class="card-text flex-grow-1">
+                    Corporate website redesign with e-commerce integrations.
+                  </p>
+
+                  <div class="mt-3 mb-2">
+                    <div class="fw-semibold mb-2 tech-title">Tech Stack</div>
+                    <div class="tech-scroll">
+                      <div class="tech-track">
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg"
+                            alt="WooCommerce"
+                          />
+                          <div class="tech-label">WooCommerce</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://img.icons8.com/ios-filled/50/000000/ticket.png"
+                            alt="Tickera"
+                          />
+                          <div class="tech-label">Tickera</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                            alt="Bootstrap"
+                          />
+                          <div class="tech-label">Bootstrap</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                          />
+                          <div class="tech-label">CSS3</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                          />
+                          <div class="tech-label">JavaScript</div>
+                        </div>
+                        <!-- duplicate for seamless loop -->
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg"
+                            alt="WooCommerce"
+                          />
+                          <div class="tech-label">WooCommerce</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://img.icons8.com/ios-filled/50/000000/ticket.png"
+                            alt="Tickera"
+                          />
+                          <div class="tech-label">Tickera</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                            alt="Bootstrap"
+                          />
+                          <div class="tech-label">Bootstrap</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                          />
+                          <div class="tech-label">CSS3</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                          />
+                          <div class="tech-label">JavaScript</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="btn btn-sm btn-outline-primary mt-auto"
+                    >Explore →</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3: Adapt IT RSVP Portal -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a
+              href="https://adaptit.konecta.co.za/"
+              class="text-decoration-none"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="card h-100 project-card">
+                <img
+                  src="Projects/AdpatIT/AdaptITCover.png"
+                  class="card-img-top"
+                  alt="Adapt IT Cover image"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Adapt IT Year-End RSVP Portal</h5>
+                  <p class="card-text flex-grow-1">
+                    Responsive web RSVP system with admin panel, Google Sheets
+                    integration, and email notifications.
+                  </p>
+
+                  <div class="mt-3 mb-2">
+                    <div class="fw-semibold mb-2 tech-title">Tech Stack</div>
+                    <div class="tech-scroll">
+                      <div class="tech-track">
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5"
+                          />
+                          <div class="tech-label">HTML5</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                          />
+                          <div class="tech-label">CSS3</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                            alt="Bootstrap 5"
+                          />
+                          <div class="tech-label">Bootstrap 5</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                          />
+                          <div class="tech-label">JavaScript</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg"
+                            alt="Google"
+                          />
+                          <div class="tech-label">Apps Script</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlesheets.svg"
+                            alt="Google Sheets"
+                          />
+                          <div class="tech-label">Sheets</div>
+                        </div>
+                        <!-- duplicate for seamless loop -->
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5"
+                          />
+                          <div class="tech-label">HTML5</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS3"
+                          />
+                          <div class="tech-label">CSS3</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                            alt="Bootstrap 5"
+                          />
+                          <div class="tech-label">Bootstrap 5</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"
+                          />
+                          <div class="tech-label">JavaScript</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg"
+                            alt="Google"
+                          />
+                          <div class="tech-label">Apps Script</div>
+                        </div>
+                        <div class="text-center tech-item">
+                          <img
+                            class="tech-icon"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlesheets.svg"
+                            alt="Google Sheets"
+                          />
+                          <div class="tech-label">Sheets</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="btn btn-sm btn-outline-primary mt-auto"
+                    >Explore →</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="projects.html" class="btn btn-lg btn-outline-custom">
+            <i class="fas fa-th-large me-2"></i>View All Projects
+          </a>
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Let's Work Together
+        </h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="contact-content text-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p class="lead mb-4">
+                Ready to bring your ideas to life? I'm always excited to work on
+                new projects and collaborate with amazing people.
+              </p>
+
+              <div class="contact-methods row g-4 mb-5">
+                <div class="col-md-4">
+                  <div class="contact-method">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:tetelosilas@gmail.com" class="contact-link"
+                      >tetelosilas@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="contact-method">
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <h4>LinkedIn</h4>
+                    <a
+                      href="https://www.linkedin.com/in/silas-tetelo-matabane-TT"
+                      target="_blank"
+                      rel="noopener"
+                      class="contact-link"
+                      >Connect with me</a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="contact-method">
+                    <i class="fab fa-github contact-icon"></i>
+                    <h4>GitHub</h4>
+                    <a
+                      href="https://github.com/Silas-Matabane"
+                      target="_blank"
+                      rel="noopener"
+                      class="contact-link"
+                      >View my code</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-section">
+                <h3 class="mb-3">Ready to start your project?</h3>
+                <p class="mb-4">
+                  Let's discuss how I can help you build something amazing.
+                </p>
+                <a
+                  href="mailto:tetelosilas@gmail.com"
+                  class="btn btn-primary btn-lg"
+                >
+                  <i class="fas fa-paper-plane me-2"></i>Get In Touch
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container text-center">
+        <div class="social-icons mb-3">
+          <!-- Keep existing / important links -->
+          <a
+            href="https://github.com/Silas-Matabane"
+            target="_blank"
+            class="mx-2"
+            rel="noopener"
+            aria-label="GitHub Profile"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/silas-tetelo-matabane-TT"
+            target="_blank"
+            class="mx-2"
+            rel="noopener"
+            aria-label="LinkedIn Profile"
+            ><i class="fab fa-linkedin fa-2x"></i
+          ></a>
+
+          <!-- Additional social icons (same set as hero) -->
+          <a
+            href="https://www.instagram.com/tetelo_matabane/"
+            class="mx-2"
+            aria-label="Instagram"
+            rel="noopener"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+          <a
+            href="https://web.facebook.com/tetelo.matabane.2025/"
+            class="mx-2"
+            aria-label="Facebook"
+            rel="noopener"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <a
+            href="https://x.com/MpakoSilas"
+            class="mx-2"
+            aria-label="Twitter"
+            rel="noopener"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@tetelomatabanett"
+            class="mx-2"
+            aria-label="TikTok"
+            rel="noopener"
+            ><i class="fab fa-tiktok fa-2x"></i
+          ></a>
+
+          <!-- optional other -->
+          <a
+            href="https://www.youtube.com/channel/UC56rTfEeTExksx-BSmQ2ygw"
+            target="_blank"
+            class="mx-2"
+            rel="noopener"
+            aria-label="YouTube Channel"
+            ><i class="fab fa-youtube fa-2x"></i
+          ></a>
+        </div>
+        <p class="mb-0">
+          &copy; 2026 Matabane Mpako Silas. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" aria-label="Back to top"
+      ><i class="fas fa-arrow-up"></i
+    ></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
 </html>
