@@ -1,9 +1,9 @@
 export const projects = [
   {
     id: 1,
-    title: 'Konecta Work Management App',
-    description: 'Full-stack work management platform built for Konecta. Users can register, log in, and manage tasks and workflows. Backed by a PostgreSQL database with secure authentication.',
-    image: '/Projects/Konecta/KonectaWebsite.png',
+    title: 'Konecta Nexus — Work Management',
+    description: 'Full-stack intelligent workspace for software teams. Features real-time sync, smart task boards, team workflows, time tracking, and secure login/register — backed by PostgreSQL.',
+    image: '/Projects/Konecta/KonectaApp.png',
     url: 'https://app.konecta.co.za',
     stack: [
       { label: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
