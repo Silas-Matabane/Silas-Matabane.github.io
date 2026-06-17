@@ -1,0 +1,47 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'Vastly Sage Website',
+    description: 'Responsive website for Vastly Sage — front-end design and implementation.',
+    image: '/Projects/Vastly Sage/vastlySage.png',
+    url: 'https://vastlysage.com',
+    stack: [
+      { label: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+      { label: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg' },
+      { label: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      { label: 'WooCommerce', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg' },
+      { label: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { label: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
+      { label: 'Paid Memberships Pro', icon: '/Projects/Vastly Sage/PaidMembershipProLogo.png' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Konecta Website',
+    description: 'Corporate website redesign with e-commerce integrations.',
+    image: '/Projects/Konecta/KonectaWebsite.png',
+    url: 'https://konecta.co.za/',
+    stack: [
+      { label: 'WooCommerce', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/woocommerce.svg' },
+      { label: 'Tickera', icon: 'https://img.icons8.com/ios-filled/50/000000/ticket.png' },
+      { label: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg' },
+      { label: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      { label: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Adapt IT Year-End RSVP Portal',
+    description: 'Responsive web RSVP system with admin panel, Google Sheets integration, and email notifications.',
+    image: '/Projects/AdpatIT/AdaptITCover.png',
+    url: 'https://adaptit.konecta.co.za/',
+    stack: [
+      { label: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+      { label: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      { label: 'Bootstrap 5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg' },
+      { label: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { label: 'Apps Script', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg' },
+      { label: 'Sheets', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlesheets.svg' },
+    ],
+  },
+]
