@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output — GitHub Actions builds this, don't commit it
+dist/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vite
+*.local
