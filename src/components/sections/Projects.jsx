@@ -13,7 +13,7 @@ export default function Projects() {
           A selection of my recent work — from enterprise platforms to client-facing web apps.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
           {projects.map((project) => (
             <a
               key={project.id}
