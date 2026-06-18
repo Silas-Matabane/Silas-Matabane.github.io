@@ -32,7 +32,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="text-sm" style={{ color: 'rgba(160,180,210,0.82)' }}>
-          &copy; 2026 Matabane Mpako Silas. All rights reserved.
+          &copy; 2024 – 2026 Matabane Mpako Silas. All rights reserved.
         </p>
       </div>
     </footer>
